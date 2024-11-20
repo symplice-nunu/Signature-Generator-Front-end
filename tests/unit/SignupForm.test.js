@@ -83,7 +83,7 @@ describe("SignupForm.vue", () => {
 
     // Assert API call and success message
     expect(axios.post).toHaveBeenCalledWith(
-      "http://localhost:8080/api/auth/signup",
+      "http://signaturegenerator.samueldev.com/api/auth/signup",
       userData
     );
     expect(wrapper.vm.signupSuccess).toBe(true);

@@ -50,7 +50,7 @@ export default {
   methods: {
     async logout() {
       try {
-        const response = await axios.post('http://localhost:8080/api/auth/logout');
+        const response = await axios.post('http://signaturegenerator.samueldev.com/api/auth/logout');
         if (response.data.success) {
           localStorage.removeItem('token');
           
