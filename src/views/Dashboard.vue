@@ -29,16 +29,15 @@ export default {
   },
   data() {
     return {
-      userCount: 0, // Initialize user count
+      userCount: 0,
     };
   },
   mounted() {
-    this.fetchUserCount(); // Fetch the user count when the component is mounted
+    this.fetchUserCount();
   },
   methods: {
     async fetchUserCount() {
       try {
-        // Retrieve token from localStorage
         const token = localStorage.getItem('token');
         
         if (!token) {
@@ -47,16 +46,13 @@ export default {
           return;
         }
         
-        // Make API request to fetch the user count
-        const response = await axios.get('http://signaturegenerator.samueldev.com/api/v1/users/count', {
+        const response = await axios.get('http://localhost:8080/api/v1/users/count', {
           headers: {
-            Authorization: `Bearer ${token}`, // Include token in the request headers
+            Authorization: `Bearer ${token}`,
           },
         });
-        
-        // Check if the response is successful
         if (response.data.success) {
-          this.userCount = response.data.userCount; // Update userCount with the response
+          this.userCount = response.data.userCount;
         } else {
           console.error("Failed to fetch user count");
         }
@@ -68,7 +64,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* Add your custom styles here */
-</style>
