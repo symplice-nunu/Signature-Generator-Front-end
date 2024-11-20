@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://signaturegenerator.samueldev.com', // Proxy API calls to another server
+        target: 'https://signaturegenerator.samueldev.com', // Proxy API calls to another server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''), // Optional: remove the "/api" prefix
       },
