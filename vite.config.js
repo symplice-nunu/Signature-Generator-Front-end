@@ -11,7 +11,7 @@ export default defineConfig({
     port: 8081, // Set the development server to run on port 8081
     proxy: {
       '/api': {
-        target: 'https://signaturegenerator.samueldev.com', // Proxy API calls to another server
+        target: 'http://signaturegenerator.samueldev.com', // Proxy API calls to another server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''), // Optional: remove the "/api" prefix
       },
