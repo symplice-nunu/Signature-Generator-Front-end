@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "vite": "^5.4.11",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
@@ -16,6 +17,7 @@
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-typescript": "^7.26.0",
     "@babel/register": "^7.25.9",
+    "@remix-run/dev": "^2.14.0",
     "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^5.2.0",
     "@vitest/coverage-v8": "^2.1.5",
