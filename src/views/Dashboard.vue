@@ -10,7 +10,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="bg-white p-6 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold text-teal-600">Total Users</h3>
-            <p class="text-2xl font-bold">{{ userCount }}</p> <!-- Bind dynamic value here -->
+            <router-link to="/company-settings" class="text-2xl font-bold hover:text-teal-700 cursor-pointer">
+              {{ userCount }}
+            </router-link>
           </div>
         </div>
       </div>
