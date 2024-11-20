@@ -113,7 +113,7 @@ export default {
       };
 
       try {
-        const response = await axios.post("http://signaturegenerator.samueldev.com/api/auth/login", loginData);
+        const response = await axios.post("https://signaturegenerator.samueldev.com/api/auth/login", loginData);
         console.log("Login successful:", response.data);
         
         if (response.data.token) {

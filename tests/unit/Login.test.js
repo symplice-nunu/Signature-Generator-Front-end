@@ -45,7 +45,7 @@ describe("Login.vue", () => {
     await wrapper.find("input#password").setValue("password123");
     await wrapper.find("form").trigger("submit.prevent");
 
-    expect(axios.post).toHaveBeenCalledWith("http://signaturegenerator.samueldev.com/api/auth/login", {
+    expect(axios.post).toHaveBeenCalledWith("https://signaturegenerator.samueldev.com/api/auth/login", {
       email: "test@example.com",
       password: "password123",
     });
@@ -65,7 +65,7 @@ describe("Login.vue", () => {
     await wrapper.find("input#password").setValue("wrongpassword");
     await wrapper.find("form").trigger("submit.prevent");
 
-    expect(axios.post).toHaveBeenCalledWith("http://signaturegenerator.samueldev.com/api/auth/login", {
+    expect(axios.post).toHaveBeenCalledWith("https://signaturegenerator.samueldev.com/api/auth/login", {
       email: "test@example.com",
       password: "wrongpassword",
     });
